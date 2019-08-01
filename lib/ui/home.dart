@@ -10,6 +10,7 @@
        child: Text("Pizza", textDirection: TextDirection.ltr,
        style: TextStyle(
          fontSize: 15.0,
+         decoration: TextDecoration.none,
        )
        ),
        )
