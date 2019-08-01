@@ -6,36 +6,59 @@ class Home extends StatelessWidget {
     return Center(
         child: Container(
             alignment: Alignment.center,
+            padding: EdgeInsets.only(top: 30.0, left: 10.0),
             color: Colors.deepOrangeAccent,
-            child: Row(children: <Widget>[
-              Text(
-                "Pizza",
-                textDirection: TextDirection.ltr,
-                style: TextStyle(
-                  fontSize: 80.0,
-                  decoration: TextDecoration.none,
-                  fontFamily: 'Oxygen',
-                  fontWeight: FontWeight.normal,
-                ),
-              ),
-              Text(
-                "Pizza",
-                textDirection: TextDirection.ltr,
-                style: TextStyle(
-                  fontSize: 80.0,
-                  decoration: TextDecoration.none,
-                  fontFamily: 'Oxygen',
-                  fontWeight: FontWeight.normal,
-                ),
-              ),
-              Text("Pizza",
-                  textDirection: TextDirection.ltr,
-                  style: TextStyle(
-                    fontSize: 80.0,
-                    decoration: TextDecoration.none,
-                    fontFamily: 'Oxygen',
-                    fontWeight: FontWeight.normal,
-                  )),
-            ])));
+            child: Column(
+              children: <Widget>[
+                Row(children: <Widget>[
+                  Text(
+                    "Ham and Mushroom",
+                    textDirection: TextDirection.ltr,
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      decoration: TextDecoration.none,
+                      fontFamily: 'Oxygen',
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      "Onions, chilli, beef, pepperoni, peppers",
+                      textDirection: TextDirection.ltr,
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        decoration: TextDecoration.none,
+                        fontFamily: 'Oxygen',
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ]),
+                Row(children: <Widget>[
+                  Text(
+                    "Spicy",
+                    textDirection: TextDirection.ltr,
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      decoration: TextDecoration.none,
+                      fontFamily: 'Oxygen',
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      "Ham, mushrooms, onions",
+                      textDirection: TextDirection.ltr,
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        decoration: TextDecoration.none,
+                        fontFamily: 'Oxygen',
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ])
+              ],
+            )));
   }
 }
