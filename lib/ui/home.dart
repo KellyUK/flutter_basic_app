@@ -7,9 +7,11 @@
        child:Container(
        alignment: Alignment.center,
        color: Colors.deepOrangeAccent,
-       width: 192,
-       height: 192,
-       child: Text("Pizza", textDirection: TextDirection.ltr ,),
+       child: Text("Pizza", textDirection: TextDirection.ltr,
+       style: TextStyle(
+         fontSize: 15.0,
+       )
+       ),
        )
      );
    }
