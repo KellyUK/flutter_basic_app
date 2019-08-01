@@ -6,10 +6,11 @@ class Home extends StatelessWidget {
     return Center(
         child: Container(
       alignment: Alignment.center,
-      padding: EdgeInsets.all(30.0),
+      padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 50),
       color: Colors.deepOrangeAccent,
       child: Column(children: <Widget>[
         Row(children: <Widget>[
+          
           Text(
             "Ham and Mush",
             textDirection: TextDirection.ltr,
@@ -58,6 +59,7 @@ class Home extends StatelessWidget {
           ),
         ]),
         PizzaImageWidget(),
+        OrderButton(),
       ]),
     ));
   }
@@ -73,5 +75,30 @@ class PizzaImageWidget extends StatelessWidget {
       height: 400.0,
     );
     return Container(child: image);
+  }
+}
+
+class OrderButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var button = Container(
+      margin: EdgeInsets.only(top: 50.0),
+      child: RaisedButton(
+          child: Text("Order your Pizza!!"),
+          color: Colors.lightGreen,
+          elevation: 5.0,
+          onPressed: () {
+            order(context);
+          }),
+    );
+    return button;
+  }
+
+  void order(BuildContext context) {
+    var alert = AlertDialog(
+      title: Text("Order Completed"),
+      content: Text("Thanks for your order"),
+    );
+    showDialog(context: context, builder: (BuildContext context) => alert);
   }
 }
